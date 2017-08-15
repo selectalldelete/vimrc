@@ -11,6 +11,9 @@ set nocompatible
 set pastetoggle=<F2>
 set clipboard=unnamed
 
+" Allow deletion of text not typed during current insert session
+set backspace=indent,eol,start
+
 " Remove highlight of last search
 noremap <C-n> :nohl<CR>
 vnoremap <C-n> :nohl<CR>
@@ -48,11 +51,11 @@ syntax on
 
 " Line numbers and length
 set number  " show line numbers
-set tw=79   " width of document (used by gd)
-set nowrap  " don't automatically wrap on load
-set fo-=t   " don't automcatically wrap text when typing
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+" set tw=79   " width of document (used by gd)
+" set nowrap  " don't automatically wrap on load
+" set fo-=t   " don't automcatically wrap text when typing
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=233
 
 " Easier formatting of paragraphs
 vmap Q gq
@@ -96,7 +99,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_switch_buffer = 'et'  " if file is already open, open it in a new pane
 
 " python-mode
-Plugin 'python-mode/python-mode'
+"Plugin 'python-mode/python-mode'
 
 " Code folding
 "" TODO
